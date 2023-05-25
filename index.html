@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Merry Cake</title>
+    <style>
+        :root{
+    --black: #1B1722;
+    --white : #F0F0F0;
+    --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+*{
+    font-family: 'Quicksand', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+.header{
+    top: 0;right: 0;left: 0;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding: 1.4rem 7%;
+    z-index: 999;
+}
+.header .logoContent{
+    display: flex;
+    align-items: center;
+}
+.header .logoContent .logo img{
+    height: 4rem;
+}
+.header .logoContent .logoName {
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.header .navbar a{
+    font-size: 1rem;
+    margin-right: 2rem;
+    color: var(--black);
+    font-weight: bold;
+}
+.header .navbar a:hover{
+    border-bottom: .1rem solid var(--black);
+    padding-bottom: .4rem;
+}
+.header .icon i{
+    font-size: 2rem;
+    margin-right: 2rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+#menu-bar{
+    display: none;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url("C:/Users/Vincent/Desktop/Basket/Web Design Principle/Web Design Laboratory - E Commerce F/Untitled design (2).png") no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.home .homeContent{
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding: 4rem;
+}
+.home .homeContent h2{
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+    line-height: 3rem;
+    color: var(--black);
+    text-shadow: var(--box-shadow);
+}
+.home .homeContent p{
+    font-size: 1rem;
+    line-height: 2;
+    margin-bottom: 2rem;
+}
+.home .homeContent .home-btn{
+    height: 2rem;
+}
+.home .homeContent .home-btn button{
+    font-size: 1rem;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: .3rem;
+    padding: .7rem 2.4rem;
+    cursor: pointer;
+}
+.home .homeContent .home-btn button:hover{
+    font-size: 1.25rem;
+}
+section{
+    padding: 2rem 7%;
+}
+.products {
+  background-color: #fff;
+  padding: 40px;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.product {
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+.btn-place-order {
+  background-color: #2e51a2;
+  cursor: pointer;
+}
+
+.cart {
+  background-color: #f1f1f1;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .cart-item {
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+.cart h2 {
+  margin-bottom: 20px;
+}
+
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-message {
+  font-style: italic;
+}
+
+.total-price {
+    margin-bottom: 20px;
+  }
+
+.submit-order {
+    margin-bottom: 20px;
+  }
+
+.contact {
+  background-color: #f1f1f1;
+  padding: 40px;
+  text-align: center;
+}
+
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+.container {
+    line-height: 2;
+    text-align: center;
+  }
+</style>
+    <body>
+        <!-- header section start here  -->
+        <header class="header">
+            <div class="logoContent">
+                <a href="#" class="logo"><img src="C:/Users/Vincent/Desktop/Basket/Web Design Principle/FINAL/piece-cake-linear-icon-modern-outline-piece-cake-logo-con-piece-cake-linear-icon-modern-outline-piece-cake-logo-133516031-removebg-preview.png" alt=""></a>
+                <h1 class="logoName">Merry Cake </h1>
+            </div>
+    
+            <nav class="navbar">
+                <a href="#home">home</a>
+                <a href="#product">product</a>
+                <a href="#cart">Cart</a>
+                <a href="#contact">contact</a>
+            </nav>
+    
+        </header>
+
+        <!-- home section start here  -->
+    <section class="home" id="home">
+        <div class="homeContent">
+            <h2>Delicious Cake for Everyone </h2>
+            <p>Satisfy your delight here at Merry Cake! Order now for a delicous treat only for an affordable price!</p>
+            <div class="home-btn">
+                <a href="#product"><button>see more</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- home section end here  -->
+
+    <!-- product section starts here-->
+
+    <section class="product" id="product">
+        <div class="container">
+          <h1>Featured Products</h1>
+          <div class="product-list">
+            <div class="product">
+              <img src="C:\Users\Vincent\Desktop\Basket\Web Design Principle\Web Design Laboratory - E Commerce F\Ube Chiffon.png" alt="Cake1">
+              <h3>Ube Chiffon</h3>
+              <p>₱1,500</p>
+              <a href="#" class="btn add-to-cart" onclick="addToCart('Ube Chiffon', 1500)">Add to Cart</a>
+            </div>
+            <div class="product">
+              <img src="C:\Users\Vincent\Desktop\Basket\Web Design Principle\Web Design Laboratory - E Commerce F\Mocha Chiffon.png" alt="Cake2">
+              <h3>Mocha Chiffon</h3>
+              <p>₱1,500</p>
+              <a href="#" class="btn add-to-cart" onclick="addToCart('Mocha Chiffon', 1500)">Add to Cart</a>
+            </div>
+            <div class="product">
+              <img src="C:\Users\Vincent\Desktop\Basket\Web Design Principle\Web Design Laboratory - E Commerce F\Brazo Chiffon.png" alt="Cake3">
+              <h3>Brazo Chiffon</h3>
+              <p>₱900</p>
+              <a href="#" class="btn add-to-cart" onclick="addToCart('Brazo Chiffon', 900)">Add to Cart</a>
+            </div>
+            <div class="product">
+              <img src="C:\Users\Vincent\Desktop\Basket\Web Design Principle\Web Design Laboratory - E Commerce F\White Chocolate Leches.png" alt="Cake4">
+              <h3>White Chocolate De Leches</h3>
+              <p>₱2,500</p>
+              <a href="#" class="btn add-to-cart" onclick="addToCart('White Chocolate De Leches', 2500)">Add to Cart</a>
+        
+          </div>
+        </div>
+      </section>
+
+      <section id="cart" class="cart">
+        <div class="container">
+          <h2>Shopping Cart</h2>
+          <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+          </div>
+          <p class="cart-message">Your cart is empty.</p>
+          <p class="total-price">Total Price: ₱0.00</p>
+        </div>
+      </section>
+      
+      <section id="submit-order" class="submit-order">
+        <div class="container">
+          <button class="btn btn-place-order" onclick="submitOrder()">Submit Order</button>
+        </div>
+      </section>
+      
+      <section id="contact" class="contact" style="display: none;">
+        <div class="container">
+          <h2>Confirm your Order</h2>
+          <p>Fill out the form below to place your order.</p>
+          <form id="order-form">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <input type="text" id="address" placeholder="Address" required>
+            <button type="submit" class="btn">Place Order</button>
+          </form>
+          <div id="order-details" style="display: none;"></div>
+        </div>
+      </section>
+      
+      <footer>
+        <div class="container">
+          <p>&copy; 2023 Merry Cake Shop. All rights naka reserba.</p>
+        </div>
+      </footer>
+      
+      <script>
+        function submitOrder() {
+          const cartSection = document.getElementById('cart');
+          const cartItemsContainer = cartSection.querySelector('.cart-items');
+          const submitOrderSection = document.getElementById('submit-order');
+          const contactSection = document.getElementById('contact');
+      
+          if (cartItemsContainer.children.length === 0) {
+            alert('Add cakes to your cart first.');
+          } else {
+            submitOrderSection.style.display = 'none';
+            contactSection.style.display = 'block';
+          }
+        }
+        // Function to add items to the cart
+        function addToCart(productName, price) {
+            const cartSection = document.querySelector('#cart');
+            const cartItemsContainer = cartSection.querySelector('.cart-items');
+            const totalPriceElement = cartSection.querySelector('.total-price');
+
+            // Create a new cart item element
+            const item = document.createElement('div');
+            item.classList.add('cart-item');
+            item.textContent = `${productName} - ₱${price.toFixed(2)}`;
+
+            // Append the new item to the cart
+            cartItemsContainer.appendChild(item);
+
+            // Calculate the total price
+            const totalPrice = Array.from(cartItemsContainer.querySelectorAll('.cart-item')).reduce((acc, item) => {
+                const itemPrice = parseFloat(item.textContent.split(' - ')[1].replace('₱', ''));
+                return acc + itemPrice;
+            }, 0);
+
+            // Update the total price in the cart
+            totalPriceElement.textContent = `Total Price: ₱${totalPrice.toFixed(2)}`;
+
+            // Update the cart message
+            const cartMessage = cartSection.querySelector('.cart-message');
+            cartMessage.textContent = '';
+        }
+
+        // Function to handle placing the order
+        document.getElementById('order-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Retrieve order details
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+
+            // Create the order details display
+            const orderDetails = `
+                <br><h3>Order Details</h3>
+                <p>Name: ${name}</p>
+                <p>Email: ${email}</p>
+                <p>Phone: ${phone}</p>
+                <p>Address: ${address}</p></br>
+                <br><i><h4><p>Thank you for selecting Merry Cake! We are thrilled to share that your order is currently being carefully processed! :)</h4></i></li></br>
+            `;
+
+            // Display the order details
+            const orderDetailsContainer = document.getElementById('order-details');
+            orderDetailsContainer.innerHTML = orderDetails;
+            orderDetailsContainer.style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>
+
+        
